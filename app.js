@@ -2,7 +2,7 @@ const express = require('express')
 const uuid = require('uuid');
 const fs = require('fs');
 const app = express()
-const port = 3000
+let port = process.env.PORT || 3000;
 
 app.use(express.static('public'))
 app.use(express.json()) // for parsing application/json
